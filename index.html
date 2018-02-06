@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>orientation-judge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+    </div>
+
+    <script>
+        (function (window, document) {
+            function judgeOrientation() {
+                if (window.orientation == 0 || window.orientation == 180) {
+                    document.querySelector('.content').innerText = '横屏'
+                } else if (window.orientation == 90 || window.orientation == -90) {
+                    document.querySelector('.content').innerText = '竖屏'
+                } else {
+                    document.querySelector('.content').innerText = '不支持orientationchange'
+                }
+            }
+
+            window.addEventListener("onorientationchange" in window ? "orientationchange" : "", judgeOrientation)
+            judgeOrientation()
+
+        })(window, document)
+    </script>
+</body>
+
+</html>
