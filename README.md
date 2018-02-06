@@ -5,6 +5,6 @@ judge html page in mobile is portrait screen or landscape screen
 
 | #       | mobile|    pc    |
 |---------|-------|----------------|
-| portrait| `0 || 180`   |  undefined     |
-|landscape| `90 || -90`  |  undefined     |
+| portrait| '0 || 180'   |  undefined     |
+|landscape| '90 || -90'  |  undefined     |
 
